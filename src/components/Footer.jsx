@@ -111,9 +111,9 @@ const Footer = () => {
           © 2024 A.B.Vamsi. All rights reserved.
         </div>
         <div className="text-center flex items-center justify-center gap-8 mt-8 text-gray-400">
-       <h1><GithubOutlined /></h1>  
-      <span> <h1> <LinkedinOutlined /></h1> </span>
-         <InstagramOutlined />
+      <a href='https://github.com/abvinnovator'> <h1><GithubOutlined /></h1>  </a>
+   <a href='https://www.linkedin.com/in/brahmavamsi-aratipamula-42251626b/'><span> <h1> <LinkedinOutlined /></h1> </span></a>   
+    <a href='https://www.instagram.com/vamsiaratipamula/'   >  <InstagramOutlined /></a>
         </div>
       </div>
     </footer>
