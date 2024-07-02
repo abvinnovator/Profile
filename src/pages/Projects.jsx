@@ -3,6 +3,19 @@ import { Carousel } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 
 const projects = [
+   {
+    images: [
+      'https://private-user-images.githubusercontent.com/144054938/344946396-e24c3b6c-8e35-401b-a10c-0585e110fdd7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTk5MTA3OTAsIm5iZiI6MTcxOTkxMDQ5MCwicGF0aCI6Ii8xNDQwNTQ5MzgvMzQ0OTQ2Mzk2LWUyNGMzYjZjLThlMzUtNDAxYi1hMTBjLTA1ODVlMTEwZmRkNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcwMlQwODU0NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00MTU2MDBlZTNkYjdmYzAzMDIxZTJhOWQ4MmQzMDJkOWQ3NzliN2MxOTY2YmU4YmY2NzQxYjFhZmQxNTNiZDhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.DVeH0NYeNkYTkFQKLgvtH0CEsMiRx1WolIm6dRd9W3g',
+      'https://private-user-images.githubusercontent.com/144054938/344946718-4e5b17e2-63d8-4b2d-b5bf-d58bb42ad90f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTk5MTA3OTAsIm5iZiI6MTcxOTkxMDQ5MCwicGF0aCI6Ii8xNDQwNTQ5MzgvMzQ0OTQ2NzE4LTRlNWIxN2UyLTYzZDgtNGIyZC1iNWJmLWQ1OGJiNDJhZDkwZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcwMlQwODU0NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZjE1ZWY2OTNmODEyMDhkYzU5ZjQyNTBiYzFkZWZhZWI1M2UwZGFjNDI5NjdiMzgxNGNlMTkwNGVmZThhYjM1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.rFAszrh20v5rtFfxBTLh5Lmj_DkysFUh7EH-Cy0Rac0',
+      
+      
+    ],
+    title: 'Ecommerce-Store',
+    description: 'This project implements an Ecommerce platform using the MERN stack (MongoDB, Express.js, React.js, Node.js). It includes user authentication, admin functionalities, cart management, product search, and detailed product viewing.',
+    url: 'https://project1.example.com',
+    git:'https://github.com/abvinnovator/Ecommerce-MERN'
+    
+  },
   {
     images: [
       'https://res.cloudinary.com/dtonbpwvj/image/upload/v1718545792/profile/s7ake4ffc8hg599rrytt.png',
