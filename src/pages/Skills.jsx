@@ -10,16 +10,15 @@ const skills = [
   { name: 'HTML & CSS', level: 95, color: 'lime' },
   { name: 'Python', level: 65, color: 'green' },
   { name: 'Machine Learning', level: 60, color: 'cyan' },
-  
 ];
 
-const Skills = () => {
+const Skills = ({darkMode}) => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className='text-center text-4xl font-bold mb-8'>My Skills</h1>
+    <div className={`bg-white ${darkMode ? 'dark:bg-gray-900 text-gray-200' : 'text-gray-800'} min-h-screen p-4 transition-all duration-500`}>
+      <h1 className="text-center text-4xl font-bold mb-8">My Skills</h1>
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((skill, index) => (
-          <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg p-6 bg-white">
+          <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg p-6 bg-white dark:bg-gray-800">
             <div className="flex justify-between items-center mb-4">
               <span className="text-lg font-bold">{skill.name}</span>
               <Tag color={skill.color}>{skill.level}%</Tag>
