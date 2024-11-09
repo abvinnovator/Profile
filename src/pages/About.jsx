@@ -23,7 +23,8 @@ const About = ({ darkMode }) => {
       </div>
       <div className="flex justify-center items-center mt-8 md:mt-12">
         <a
-          href="https://drive.google.com/uc?export=download&id=1CFWYAcJV5jebXrOTVf6tw31KaSu__hFo"
+          href="https://drive.google.com/uc?export=download&id=1QuMBUocD55oJ3G9xB1NG39_TTQ5siQ-9LNA4iHglPlk"
+          download="Resume_A_Brahma_Vamsi.pdf" // Optional: You can name the file explicitly
           className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300"
         >
           Download Resume
