@@ -1,5 +1,5 @@
 import React from 'react';
-
+import resume from '../../public/output_11.pdf'
 const About = ({ darkMode }) => {
   return (
     <div className={`bg-white ${darkMode ? 'dark:bg-gray-900 text-gray-200' : 'text-gray-800'} min-h-screen p-4 transition-all duration-500`}>
@@ -23,7 +23,7 @@ const About = ({ darkMode }) => {
       </div>
       <div className="flex justify-center items-center mt-8 md:mt-12">
         <a
-          href="https://drive.google.com/uc?export=download&id=1QuMBUocD55oJ3G9xB1NG39_TTQ5siQ-9LNA4iHglPlk"
+          href={resume}
           download="Resume_A_Brahma_Vamsi.pdf" // Optional: You can name the file explicitly
           className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300"
         >
