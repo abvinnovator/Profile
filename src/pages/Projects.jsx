@@ -3,6 +3,17 @@ import { Carousel } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 
 const projects = [
+   {
+    images: [
+      'https://res.cloudinary.com/dtonbpwvj/image/upload/v1741948142/profile/qpxkthrfdqjiwbvzovqw.png',
+      'https://res.cloudinary.com/dtonbpwvj/image/upload/v1741948267/profile/nc7cbgb7i2zmfmesk0ra.png',
+      'https://res.cloudinary.com/dtonbpwvj/image/upload/v1741952964/profile/rp7ep0kvkjsibkm29d6z.png'
+    ],
+    title: 'Reel Recall-Movie sharing platform',
+    description: 'Personal Movie Memory Bank where users can store their favorite movies and share them with others.',
+    url: 'https://reel-recall.vercel.app/',
+    git: 'https://github.com/abvinnovator/ReelRecall'
+  },
   {
     images: [
       'https://res.cloudinary.com/dtonbpwvj/image/upload/v1720014556/Screenshot_2024-07-02_140817_u9bvwm.png',
@@ -76,6 +87,7 @@ const projects = [
     url: 'https://abvdiscounts.netlify.app/',
     git: 'https://github.com/abvinnovator/Online-Discount-Store'
   }
+ 
 ];
 
 const Projects = ({darkMode}) => {
