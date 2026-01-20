@@ -1,5 +1,5 @@
 import React from 'react';
-import resume from '../../public/output_11.pdf'
+import resume from '../../public/output.pdf'
 const About = ({ darkMode }) => {
   return (
     <div className={`bg-white ${darkMode ? 'dark:bg-gray-900 text-gray-200' : 'text-gray-800'} min-h-screen p-4 transition-all duration-500`}>
