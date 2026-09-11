@@ -1,45 +1,67 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Skills from './pages/Skills';
-import Home from './pages/Home';
-import Footer from './components/Footer';
+import BentoGrid from './components/BentoGrid';
+import Overlay from './components/Overlay';
+import ExperienceSection from './components/ExperienceSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
+import ResumeSection from './components/ResumeSection';
+import ContactSection from './components/ContactSection';
+
+const panelTitles = {
+  experience: 'Experience',
+  skills: 'Skills',
+  projects: 'Projects',
+  resume: 'Resume',
+  contact: 'Contact',
+};
+
+const panelContent = {
+  experience: <ExperienceSection />,
+  skills: <SkillsSection />,
+  projects: <ProjectsSection />,
+  resume: <ResumeSection />,
+  contact: <ContactSection />,
+};
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
+    const saved = localStorage.getItem('theme');
+    return saved ? saved === 'dark' : true; // default to dark
   });
+  const [activePanel, setActivePanel] = useState(null);
 
   useEffect(() => {
-    const body = document.body;
+    const root = document.documentElement;
     if (darkMode) {
-      body.classList.add('dark');
+      root.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      body.classList.remove('dark');
+      root.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+  const openPanel = (panel) => setActivePanel(panel);
+  const closePanel = () => setActivePanel(null);
 
   return (
-    <Router>
-      <div className={`transition-colors duration-500 ${darkMode ? 'dark' : ''}`}>
-        <Dashboard darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <Routes>
-          <Route path='/' element={<Home darkMode={darkMode} />} />
-          <Route path="/about" element={<About darkMode={darkMode} />} />
-          <Route path="/projects" element={<Projects darkMode={darkMode} />} />
-          <Route path="/skills" element={<Skills darkMode={darkMode} />} />
-        </Routes>
-        <Footer darkMode={darkMode} />
-      </div>
-    </Router>
+    <div className="app">
+      <BentoGrid
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        onPanelClick={openPanel}
+      />
+
+      <Overlay
+        isOpen={activePanel !== null}
+        title={activePanel ? panelTitles[activePanel] : ''}
+        onClose={closePanel}
+        className={activePanel === 'resume' ? 'overlay--resume' : ''}
+      >
+        {activePanel && panelContent[activePanel]}
+      </Overlay>
+    </div>
   );
 }
 

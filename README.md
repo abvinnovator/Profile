@@ -1,3 +1,3 @@
-# See deployed Site Here : 
+# See deployed Site Here :
 
-- [My portfolio](https://brahmavamsia.netlify.app/) uses [NetlifyDeploy]
+- [My portfolio](https://abvamsi.online/)
