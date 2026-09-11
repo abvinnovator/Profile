@@ -61,18 +61,24 @@ const projects = [
   
 ];
 
-const ProjectsSection = () => {
-  const [activeProject, setActiveProject] = useState(null);
+const ProjectsSection = ({ activeProjectSlug, onSelectProject }) => {
+  const activeProject = activeProjectSlug
+    ? projects.find((p) => p.id === activeProjectSlug) || null
+    : null;
 
   const openProject = (project) => {
-    setActiveProject(project);
+    if (onSelectProject) {
+      onSelectProject(project.id);
+    }
     // Scroll overlay body to top when opening an article
     const body = document.querySelector('.overlay__body');
     if (body) body.scrollTop = 0;
   };
 
   const closeProject = () => {
-    setActiveProject(null);
+    if (onSelectProject) {
+      onSelectProject(null);
+    }
     const body = document.querySelector('.overlay__body');
     if (body) body.scrollTop = 0;
   };
